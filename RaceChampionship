@@ -1,0 +1,64 @@
+using System;
+
+  public class Car {
+    string name;
+    string brand;
+    int topSpeed;
+    int score;
+
+    public RaceChampionship(string name, string brand int topSpeed, int score) {
+      Name = name;
+      Brand = brand;
+      TopSpeed = TopSpeed;
+      Score = 0;
+    }
+  
+    public string GetName() {
+      return name;
+    }
+    public void SetName(string name) {
+      this.name = name;
+    }
+    public string GetBrand() {
+      return brand;
+    }
+    public void SetBrand(string brand) {
+    this.brand = brand;
+    }
+    public void GetTopSpeed() {
+      return topSpeed;
+    }
+    public void SetTopSpeed(int topSpeed) {
+      this.topSpeed = topSpeed;
+    }
+    public int SetScore() {
+      return score;
+    }
+    public void GetScore(int score) {
+      this.score = score;
+    }
+    
+    public void addPoints(int points) {
+      score += points
+    }
+
+    public void showInfo() {
+      Console.WriteLine(name + "heeft " + score + " punten.");
+    }
+  }
+
+  class Race {
+    public void startRace(Car car1, Car car2) {
+      Random rng = new Random(); 
+      int rand1 = rng.Next(1,3);
+
+      if(rand1 == 1) {
+        car1.addPoints(10);
+        Console.WriteLine("Car1 wint de race");
+      }
+      else {
+        car2.addPoints(10);
+        Console.WriteLine("Car2 wint de race");
+      }
+    }
+    
